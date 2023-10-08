@@ -1,20 +1,20 @@
 {
-    "name": "laravel-notification-channels/:package_name",
-    "description": ":package_description",
-    "homepage": "https://github.com/laravel-notification-channels/:package_name",
+    "name": "laravel-notification-channels/line-notify-channel",
+    "description": "Use LINE Notify Service to notify users",
+    "homepage": "https://github.com/laravel-notification-channels/line-notify-channel",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": ":author_website",
+            "name": "hsuan",
+            "email": "hsuan@hsuan.app",
+            "homepage": "https://hsuan.app",
             "role": "Developer"
         }
     ],
     "require": {
         "php": ">=7.2",
-        "illuminate/notifications": "~6.0 || ~7.0 || ~8.0",
-        "illuminate/support": "~6.0 || ~7.0 || ~8.0"
+        "illuminate/notifications": "~8.0 || ~9.0 || ~10.0",
+        "illuminate/support": "~8.0 || ~9.0 || ~10.0"
     },
     "require-dev": {
         "mockery/mockery": "^1.0",
@@ -22,12 +22,12 @@
     },
     "autoload": {
         "psr-4": {
-            "NotificationChannels\\:channel_namespace\\": "src"
+            "NotificationChannels\\LINENotify\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "NotificationChannels\\:channel_namespace\\Test\\": "tests"
+            "NotificationChannels\\LINENotify\\Test\\": "tests"
         }
     },
     "scripts": {
