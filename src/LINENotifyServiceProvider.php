@@ -14,7 +14,7 @@ class LINENotifyServiceProvider extends ServiceProvider
         // Bootstrap code here.
 
         $this->publishes([
-            __DIR__.'/../config/line-notify.php' => config_path('line-notify.php'),
+            __DIR__.'/config/line-notify.php' => config_path('line-notify.php'),
         ], 'line-notify-config');
 
         /**
