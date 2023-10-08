@@ -13,6 +13,10 @@ class LINENotifyServiceProvider extends ServiceProvider
     {
         // Bootstrap code here.
 
+        $this->publishes([
+            __DIR__.'/../config/line-notify.php' => config_path('line-notify.php'),
+        ]);
+
         /**
          * Here's some example code we use for the pusher package.
 
