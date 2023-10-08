@@ -4,8 +4,8 @@ namespace NotificationChannels\LINENotify\Exceptions;
 
 class CouldNotSendNotification extends \Exception
 {
-    public static function serviceRespondedWithAnError($response)
+    public static function missingRecipient()
     {
-        return new static("Descriptive error message.");
+        return new static("Please provide a recipient for your notification.");
     }
 }

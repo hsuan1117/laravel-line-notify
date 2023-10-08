@@ -22,10 +22,18 @@ class LINENotifyChannel
      */
     public function send($notifiable, Notification $notification)
     {
-        //$response = [a call to the api of your notification send]
+        $message = $notification->toLINENotify($notifiable);
 
-//        if ($response->error) { // replace this by the code need to check for errors
-//            throw CouldNotSendNotification::serviceRespondedWithAnError($response);
-//        }
+        if (is_string($message)) {
+            $message = LINENotifyMessage::create($message);
+        }
+
+        if (!$to = $notification->routeNotificationForLINENotify($notifiable)) {
+            throw CouldNotSendNotification::missingRecipient();
+        }
+
+        $response = $message->to($to)->send();
+
+        return json_decode($response->getBody()->getContents(), true);
     }
 }
