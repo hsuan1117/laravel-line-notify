@@ -36,5 +36,15 @@
     },
     "config": {
         "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NotificationChannels\\LINENotify\\LINENotifyServiceProvider"
+            ],
+            "aliases": {
+                "LINENotify": "NotificationChannels\\LINENotify\\LINENotify"
+            }
+        }
     }
 }
