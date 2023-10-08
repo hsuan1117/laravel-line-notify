@@ -1,5 +1,5 @@
 {
-    "name": "laravel-notification-channels/line-notify-channel",
+    "name": "hsuan1117/line-notify-channel",
     "description": "Use LINE Notify Service to notify users",
     "homepage": "https://github.com/laravel-notification-channels/line-notify-channel",
     "license": "MIT",
